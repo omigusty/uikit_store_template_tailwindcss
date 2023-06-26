@@ -1,0 +1,602 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header
+        class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-3 sm:py-0 dark:bg-gray-800 dark:border-gray-700">
+        <nav class="relative max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
+            aria-label="Global">
+            <div class="flex items-center justify-between">
+                <a class="flex-none text-xl font-semibold dark:text-white" href="#" aria-label="Brand">Brand</a>
+                <div class="sm:hidden">
+                    <button type="button"
+                        class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
+                        data-hs-collapse="#navbar-collapse-with-animation"
+                        aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
+                        <svg class="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                        <svg class="hs-collapse-open:block hidden w-4 h-4" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="navbar-collapse-with-animation"
+                class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
+                <div
+                    class="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:pl-7">
+                    <a class="font-medium text-blue-600 sm:py-6 dark:text-blue-500" href="#"
+                        aria-current="page">Landing</a>
+                    <a class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
+                        href="#">Account</a>
+                    <a class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
+                        href="#">Work</a>
+                    <a class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
+                        href="#">Blog</a>
+
+                    <div
+                        class="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--trigger:hover] sm:py-4">
+                        <button type="button"
+                            class="flex items-center w-full text-gray-500 hover:text-gray-400 font-medium dark:text-gray-400 dark:hover:text-gray-500 ">
+                            Dropdown
+                            <svg class="ml-2 w-2.5 h-2.5 text-gray-600" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                            </svg>
+                        </button>
+
+                        <div
+                            class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:left-0 before:w-full before:h-5">
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                                href="#">
+                                About
+                            </a>
+                            <div
+                                class="hs-dropdown relative [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] sm:[--trigger:hover]">
+                                <button type="button"
+                                    class="w-full flex justify-between w-full items-center text-sm text-gray-800 rounded-md py-2 px-3 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
+                                    Sub Menu
+                                    <svg class="sm:-rotate-90 ml-2 w-2.5 h-2.5 text-gray-600" width="16" height="16"
+                                        viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
+
+                                <div
+                                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 sm:mt-2 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute sm:border before:-right-5 before:top-0 before:h-full before:w-5 top-0 right-full !mx-[10px]">
+                                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                                        href="#">
+                                        About
+                                    </a>
+                                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                                        href="#">
+                                        Downloads
+                                    </a>
+                                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                                        href="#">
+                                        Team Account
+                                    </a>
+                                </div>
+                            </div>
+
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                                href="#">
+                                Downloads
+                            </a>
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                                href="#">
+                                Team Account
+                            </a>
+                        </div>
+                    </div>
+
+                    <a class="flex items-center gap-x-2 font-medium text-gray-500 hover:text-blue-600 sm:border-l sm:border-gray-300 sm:my-6 sm:pl-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500"
+                        href="#">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                        </svg>
+                        Log in
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero section -->
+    <div
+        class="relative overflow-hidden before:absolute before:top-0 before:left-1/2 before:bg-[url('https://preline.co/assets/svg/component/squared-bg-element.svg')] before:bg-no-repeat before:bg-top before:w-full before:h-full before:-z-[1] before:transform before:-translate-x-1/2 dark:before:bg-[url('https://preline.co/assets/svg/component/squared-bg-element-dark.svg')]">
+        <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10">
+            <!-- Announcement Banner -->
+            <div class="flex justify-center">
+                <a class="inline-flex items-center gap-x-2 bg-white border border-gray-200 text-xs text-gray-600 p-2 px-3 rounded-full transition hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-400"
+                    href="#">
+                    Explore the Capital Product
+                    <span class="flex items-center gap-x-1">
+                        <span class="border-l border-gray-200 text-blue-600 pl-2 dark:text-blue-500">Explore</span>
+                        <svg class="w-2.5 h-2.5 text-blue-600" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <!-- End Announcement Banner -->
+
+            <!-- Title -->
+            <div class="mt-5 max-w-xl text-center mx-auto">
+                <h1 class="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-gray-200">
+                    Supercharged Preline Experience
+                </h1>
+            </div>
+            <!-- End Title -->
+
+            <div class="mt-5 max-w-3xl text-center mx-auto">
+                <p class="text-lg text-gray-600 dark:text-gray-400">Preline is a large open-source project, crafted with
+                    Tailwind CSS framework by Hmlstream.</p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="mt-8 grid gap-3 w-full sm:inline-flex sm:justify-center">
+                <a class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-4 dark:focus:ring-offset-gray-800"
+                    href="#">
+                    <svg class="w-4.5 h-4.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+                        </path>
+                    </svg>
+                    Continue with Github
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End Hero -->
+
+    <!-- Product Section -->
+    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <!-- Title -->
+        <div class="max-w-full mb-10 flex justify-center">
+            <div class="flex">
+                <div
+                    class="flex bg-gray-100 hover:bg-gray-200 rounded-lg transition p-1 dark:bg-gray-700 dark:hover:bg-gray-600">
+                    <nav class="flex space-x-2" aria-label="Tabs" role="tablist">
+                        <button type="button"
+                            class="hs-tab-active:bg-white hs-tab-active:text-gray-700 hs-tab-active:dark:bg-gray-800 hs-tab-active:dark:text-gray-400 dark:hs-tab-active:bg-gray-800 py-3 px-4 inline-flex items-center gap-2 bg-transparent text-sm text-gray-500 hover:text-gray-700 font-medium rounded-md hover:hover:text-blue-600 dark:text-gray-400 dark:hover:text-white active"
+                            id="segment-item-1" data-hs-tab="#segment-1" aria-controls="segment-1" role="tab">
+                            Tab 1
+                        </button>
+                        <button type="button"
+                            class="hs-tab-active:bg-white hs-tab-active:text-gray-700 hs-tab-active:dark:bg-gray-800 hs-tab-active:dark:text-gray-400 dark:hs-tab-active:bg-gray-800 py-3 px-4 inline-flex items-center gap-2 bg-transparent text-sm text-gray-500 hover:text-gray-700 font-medium rounded-md hover:hover:text-blue-600 dark:text-gray-400 dark:hover:text-white dark:hover:text-gray-300"
+                            id="segment-item-2" data-hs-tab="#segment-2" aria-controls="segment-2" role="tab">
+                            Tab 2
+                        </button>
+                        <button type="button"
+                            class="hs-tab-active:bg-white hs-tab-active:text-gray-700 hs-tab-active:dark:bg-gray-800 hs-tab-active:dark:text-gray-400 dark:hs-tab-active:bg-gray-800 py-3 px-4 inline-flex items-center gap-2 bg-transparent text-sm text-gray-500 hover:text-gray-700 font-medium rounded-md hover:hover:text-blue-600 dark:text-gray-400 dark:hover:text-white dark:hover:text-gray-300"
+                            id="segment-item-3" data-hs-tab="#segment-3" aria-controls="segment-3" role="tab">
+                            Tab 3
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- End Title -->
+
+        <div class="mt-3">
+            <div id="segment-1" role="tabpanel" aria-labelledby="segment-item-1">
+                <!-- Grid -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card -->
+                    <a class="group block" href="#">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img class="w-full object-cover rounded-xl"
+                                src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                                alt="Image Description">
+                        </div>
+                        <h3
+                            class="mt-2 text-center lg:truncate text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
+                            Unity's inside sales team drives 80% of its revenue with Preline.
+                        </h3>
+                        <p class="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
+                            September 12, 2022
+                        </p>
+                    </a>
+                    <!-- End Card -->
+
+                    <!-- Card -->
+                    <a class="group block" href="#">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img class="w-full object-cover rounded-xl"
+                                src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                                alt="Image Description">
+                        </div>
+                        <h3
+                            class="mt-2 text-center lg:truncate text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
+                            Unity's inside sales team drives 80% of its revenue with Preline.
+                        </h3>
+                        <p class="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
+                            September 12, 2022
+                        </p>
+                    </a>
+                    <!-- End Card -->
+
+                    <!-- Card -->
+                    <a class="group block" href="#">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img class="w-full object-cover rounded-xl"
+                                src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                                alt="Image Description">
+                        </div>
+                        <h3
+                            class="mt-2 text-center lg:truncate text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
+                            Unity's inside sales team drives 80% of its revenue with Preline.
+                        </h3>
+                        <p class="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
+                            September 12, 2022
+                        </p>
+                    </a>
+                    <!-- End Card -->
+
+                    <!-- Card -->
+                    <a class="group block" href="#">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img class="w-full object-cover rounded-xl"
+                                src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                                alt="Image Description">
+                        </div>
+                        <h3
+                            class="mt-2 text-center lg:truncate text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
+                            Unity's inside sales team drives 80% of its revenue with Preline.
+                        </h3>
+                        <p class="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
+                            September 12, 2022
+                        </p>
+                    </a>
+                    <!-- End Card -->
+
+                    <!-- Card -->
+                    <a class="group block" href="#">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img class="w-full object-cover rounded-xl"
+                                src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                                alt="Image Description">
+                        </div>
+                        <h3
+                            class="mt-2 text-center lg:truncate text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
+                            Unity's inside sales team drives 80% of its revenue with Preline.
+                        </h3>
+                        <p class="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
+                            September 12, 2022
+                        </p>
+                    </a>
+                    <!-- End Card -->
+
+                     <!-- Card -->
+                     <a class="group block" href="#">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img class="w-full object-cover rounded-xl"
+                                src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                                alt="Image Description">
+                        </div>
+                        <h3
+                            class="mt-2 text-center lg:truncate text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
+                            Unity's inside sales team drives 80% of its revenue with Preline.
+                        </h3>
+                        <p class="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
+                            September 12, 2022
+                        </p>
+                    </a>
+                    <!-- End Card -->
+
+                     <!-- Card -->
+                     <a class="group block" href="#">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img class="w-full object-cover rounded-xl"
+                                src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                                alt="Image Description">
+                        </div>
+                        <h3
+                            class="mt-2 text-center lg:truncate text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
+                            Unity's inside sales team drives 80% of its revenue with Preline.
+                        </h3>
+                        <p class="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
+                            September 12, 2022
+                        </p>
+                    </a>
+                    <!-- End Card -->
+
+                     <!-- Card -->
+                     <a class="group block" href="#">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img class="w-full object-cover rounded-xl"
+                                src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                                alt="Image Description">
+                        </div>
+                        <h3
+                            class="mt-2 text-center lg:truncate text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
+                            Unity's inside sales team drives 80% of its revenue with Preline.
+                        </h3>
+                        <p class="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
+                            September 12, 2022
+                        </p>
+                    </a>
+                    <!-- End Card -->
+                </div>
+                <!-- End Grid -->
+            </div>
+            <div id="segment-2" class="hidden" role="tabpanel" aria-labelledby="segment-item-2">
+                <p class="text-gray-500 dark:text-gray-400">
+                    This is the <em class="font-semibold text-gray-800 dark:text-gray-200">second</em> item's tab body.
+                </p>
+            </div>
+            <div id="segment-3" class="hidden" role="tabpanel" aria-labelledby="segment-item-3">
+                <p class="text-gray-500 dark:text-gray-400">
+                    This is the <em class="font-semibold text-gray-800 dark:text-gray-200">third</em> item's tab body.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End Product Section -->
+
+    <!-- FAQ -->
+    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <!-- Title -->
+        <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+            <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">Your questions, answered</h2>
+            <p class="mt-1 text-gray-600 dark:text-gray-400">Answers to the most frequently asked questions.</p>
+        </div>
+        <!-- End Title -->
+
+        <div class="max-w-2xl mx-auto">
+            <!-- Accordion -->
+            <div class="hs-accordion-group">
+                <div class="hs-accordion hs-accordion-active:bg-gray-100 rounded-xl p-6 dark:hs-accordion-active:bg-white/[.05] active"
+                    id="hs-basic-with-title-and-arrow-stretched-heading-one">
+                    <button
+                        class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
+                        aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
+                        Can I cancel at anytime?
+                        <svg class="hs-accordion-active:hidden block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg class="hs-accordion-active:block hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div id="hs-basic-with-title-and-arrow-stretched-collapse-one"
+                        class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300"
+                        aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
+                        <p class="text-gray-800 dark:text-gray-200">
+                            Yes, you can cancel anytime no questions are asked while you cancel but we would highly
+                            appreciate if you will give us some feedback.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hs-accordion hs-accordion-active:bg-gray-100 rounded-xl p-6 dark:hs-accordion-active:bg-white/[.05]"
+                    id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                    <button
+                        class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
+                        aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                        My team has credits. How do we use them?
+                        <svg class="hs-accordion-active:hidden block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg class="hs-accordion-active:block hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div id="hs-basic-with-title-and-arrow-stretched-collapse-two"
+                        class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                        aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                        <p class="text-gray-800 dark:text-gray-200">
+                            Once your team signs up for a subscription plan. This is where we sit down, grab a cup of
+                            coffee and dial in the details.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hs-accordion hs-accordion-active:bg-gray-100 rounded-xl p-6 dark:hs-accordion-active:bg-white/[.05]"
+                    id="hs-basic-with-title-and-arrow-stretched-heading-three">
+                    <button
+                        class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
+                        aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-three">
+                        How does Preline's pricing work?
+                        <svg class="hs-accordion-active:hidden block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg class="hs-accordion-active:block hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div id="hs-basic-with-title-and-arrow-stretched-collapse-three"
+                        class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                        aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-three">
+                        <p class="text-gray-800 dark:text-gray-200">
+                            Our subscriptions are tiered. Understanding the task at hand and ironing out the wrinkles is
+                            key.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hs-accordion hs-accordion-active:bg-gray-100 rounded-xl p-6 dark:hs-accordion-active:bg-white/[.05]"
+                    id="hs-basic-with-title-and-arrow-stretched-heading-four">
+                    <button
+                        class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
+                        aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-four">
+                        How secure is Preline?
+                        <svg class="hs-accordion-active:hidden block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg class="hs-accordion-active:block hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div id="hs-basic-with-title-and-arrow-stretched-collapse-four"
+                        class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                        aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-four">
+                        <p class="text-gray-800 dark:text-gray-200">
+                            Protecting the data you trust to Preline is our first priority. This part is really crucial
+                            in keeping the project in line to completion.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hs-accordion hs-accordion-active:bg-gray-100 rounded-xl p-6 dark:hs-accordion-active:bg-white/[.05]"
+                    id="hs-basic-with-title-and-arrow-stretched-heading-five">
+                    <button
+                        class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
+                        aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-five">
+                        How do I get access to a theme I purchased?
+                        <svg class="hs-accordion-active:hidden block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg class="hs-accordion-active:block hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div id="hs-basic-with-title-and-arrow-stretched-collapse-five"
+                        class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                        aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-five">
+                        <p class="text-gray-800 dark:text-gray-200">
+                            If you lose the link for a theme you purchased, don't panic! We've got you covered. You can
+                            login to your account, tap your avatar in the upper right corner, and tap Purchases. If you
+                            didn't create a login or can't remember the information, you can use our handy Redownload
+                            page, just remember to use the same email you originally made your purchases with.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hs-accordion hs-accordion-active:bg-gray-100 rounded-xl p-6 dark:hs-accordion-active:bg-white/[.05]"
+                    id="hs-basic-with-title-and-arrow-stretched-heading-six">
+                    <button
+                        class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
+                        aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-six">
+                        Upgrade License Type
+                        <svg class="hs-accordion-active:hidden block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg class="hs-accordion-active:block hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div id="hs-basic-with-title-and-arrow-stretched-collapse-six"
+                        class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                        aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-six">
+                        <p class="text-gray-800 dark:text-gray-200">
+                            There may be times when you need to upgrade your license from the original type you
+                            purchased and we have a solution that ensures you can apply your original purchase cost to
+                            the new license purchase.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- End Accordion -->
+        </div>
+    </div>
+    <!-- End FAQ -->
+
+    <!-- Footer -->
+    <footer class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+        <!-- Grid -->
+        <div class="text-center">
+            <div>
+                <a class="flex-none text-xl font-semibold text-black dark:text-white" href="#"
+                    aria-label="Brand">Brand</a>
+            </div>
+            <!-- End Col -->
+
+            <div class="mt-3">
+                <p class="text-gray-500">We're part of the <a
+                        class="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400"
+                        href="#">Htmlstream</a> family.</p>
+                <p class="text-gray-500">© Preline. 2022 Htmlstream. All rights reserved.</p>
+            </div>
+
+            <!-- Social Brands -->
+            <div class="mt-3 space-x-2">
+                <a class="inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
+                    href="#">
+                    <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+                    </svg>
+                </a>
+                <a class="inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
+                    href="#">
+                    <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                    </svg>
+                </a>
+                <a class="inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
+                    href="#">
+                    <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                    </svg>
+                </a>
+                <a class="inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
+                    href="#">
+                    <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M3.362 10.11c0 .926-.756 1.681-1.681 1.681S0 11.036 0 10.111C0 9.186.756 8.43 1.68 8.43h1.682v1.68zm.846 0c0-.924.756-1.68 1.681-1.68s1.681.756 1.681 1.68v4.21c0 .924-.756 1.68-1.68 1.68a1.685 1.685 0 0 1-1.682-1.68v-4.21zM5.89 3.362c-.926 0-1.682-.756-1.682-1.681S4.964 0 5.89 0s1.68.756 1.68 1.68v1.682H5.89zm0 .846c.924 0 1.68.756 1.68 1.681S6.814 7.57 5.89 7.57H1.68C.757 7.57 0 6.814 0 5.89c0-.926.756-1.682 1.68-1.682h4.21zm6.749 1.682c0-.926.755-1.682 1.68-1.682.925 0 1.681.756 1.681 1.681s-.756 1.681-1.68 1.681h-1.681V5.89zm-.848 0c0 .924-.755 1.68-1.68 1.68A1.685 1.685 0 0 1 8.43 5.89V1.68C8.43.757 9.186 0 10.11 0c.926 0 1.681.756 1.681 1.68v4.21zm-1.681 6.748c.926 0 1.682.756 1.682 1.681S11.036 16 10.11 16s-1.681-.756-1.681-1.68v-1.682h1.68zm0-.847c-.924 0-1.68-.755-1.68-1.68 0-.925.756-1.681 1.68-1.681h4.21c.924 0 1.68.756 1.68 1.68 0 .926-.756 1.681-1.68 1.681h-4.21z" />
+                    </svg>
+                </a>
+            </div>
+            <!-- End Social Brands -->
+        </div>
+        <!-- End Grid -->
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../node_modules/preline/dist/preline.js" />
+</body>
+
+</html>
